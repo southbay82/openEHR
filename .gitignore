@@ -1,0 +1,34 @@
+# .gitignore
+
+# Ignore Python cache and environment files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+ENV/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.swp
+
+# Ignore secrets and environment configuration (but NOT .rules)
+.env
+.env.*
+!.env.example
+.env.secrets
+
+# Ignore memory and checkpoint files except those explicitly tracked
+ai-memory-bank/
+!ai-memory-bank/context-checkpoint.md
+
+decision_log.md
+
+# Track .rules directory (do not ignore)
+!.rules/

@@ -1,0 +1,89 @@
+## Code Style & Patterns
+
+### General Guidelines
+- Prefer simple, concise solutions
+- Suggest terminal commands or file edits when applicable
+- Check for existing similar code before adding new functionality
+- Consider dev, test, and prod environments
+- Make minimal, targeted changes
+- Exhaust existing implementation options before introducing new patterns
+- Keep codebase clean and organized
+- Avoid scripts in files for one-time use
+- Refactor files over 200-300 lines
+- Never add stubbing/fake data to dev/prod environments
+- Never overwrite .env without confirmation
+- Store secrets in .env.secrets
+- Limit logs/tail commands to 100 lines
+- Maintain a decision log for major architectural decisions and changes, including reasons for each decision and date.
+- Establish a context checkpoint, such as a ai-memory-bank/context-checkpoint.md or a markdown file, to track the current state of the codebase and provide context for future LLMs and developers. Write to this file between actions to maintain a working memory. If it's more helpful to treat this as a timestamped log, that's also acceptable.
+
+### File Organization
+- Avoid files over 200-300 lines
+- Refactor large files into smaller, focused modules
+- Store configuration in appropriate environment files
+- Keep secrets in .env.secrets
+- Maintain consistent file structure across environments
+
+### Testing Standards
+- Mock data only for tests
+- Unit tests for business logic
+- Integration tests for API endpoints
+- E2E tests for critical user flows
+- No mocking in dev/prod environments
+
+### Environment Management
+- Separate dev, test, and prod configurations
+- Never overwrite .env without confirmation
+- Store secrets in .env.secrets
+- Maintain environment-specific configurations
+- Test changes in dev before prod
+
+### Code Quality
+- Maintain consistent code style
+- Follow DRY (Don't Repeat Yourself) principle
+- Keep code clean and organized
+- Remove old implementations after introducing new patterns
+- Avoid unnecessary complexity
+- Prefer clarity over cleverness
+
+### Security
+- Never expose secrets in code
+- Store secrets in .env.secrets
+- Never overwrite .env files without confirmation
+- Follow security best practices
+- Maintain proper access controls
+
+### Performance
+- Limit log output to 100 lines
+- Optimize critical paths
+- Consider scalability in design
+- Follow performance best practices
+
+### Refactoring
+- Refactor files over 200-300 lines
+- Remove duplicate code
+- Improve code organization
+- Maintain consistent patterns
+- Follow established conventions
+
+## Windsurf Specific Instructions
+- When suggesting changes, provide clear explanations
+- Suggest specific file edits when possible
+- Consider the impact on different environments
+- Maintain consistency with existing patterns
+- Follow established conventions
+- Keep the codebase clean and organized
+
+## Environment Handling
+- Always check for environment-specific files
+- Never overwrite .env without confirmation
+- Store secrets in .env.secrets
+- Maintain separate configurations for dev, test, and prod
+- Follow security best practices
+
+## Testing Guidelines
+- Write unit tests for business logic
+- Create integration tests for API endpoints
+- Implement E2E tests for critical flows
+- Use mocks only in test environment
+- Follow testing best practices
