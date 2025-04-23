@@ -16,6 +16,46 @@ This document outlines the high-level design for a modern Electronic Health Reco
 - **In Scope**: Clinical data management, billing, AI-driven note summarization, offline UI, FHIR integration, multi-tenancy, auditing, data warehouse.
 - **Out of Scope**: Hardware specifications, third-party vendor integrations (e.g., specific imaging systems), patient-facing mobile apps.
 
+## System Overview Diagram
+
+```mermaid
+graph TD
+    A[User Interface & Roles]
+    B[Patient Demographics & Registration]
+    C[Patient Scheduling & Flow]
+    D[EMR & Encounters]
+    E[Prescriptions & Medication Management]
+    F[Clinical Decision Support]
+    G[Billing & Claims]
+    H[Reporting & Analytics]
+    I[Patient Portal Integration]
+
+    A --> B
+    A --> C
+    A --> D
+    A --> E
+    A --> F
+    A --> G
+    A --> H
+    A --> I
+```
+
+This diagram illustrates the core modules and their relationships in the EHR proof of concept. Each module is further documented in the `/doc` directory:
+
+- [User Interface & Roles](User_Interface_and_Roles.md)
+- [Patient Demographics & Registration](Patient_Demographics_and_Registration.md)
+- [Patient Scheduling & Flow](Patient_Scheduling_and_Flow.md)
+- [EMR & Encounters](EMR_and_Encounters.md)
+- [Prescriptions & Medication Management](Prescriptions_and_Medication_Management.md)
+- [Clinical Decision Support](Clinical_Decision_Support.md)
+- [Billing & Claims](Billing_and_Claims.md)
+- [Reporting & Analytics](Reporting_and_Analytics.md)
+- [Patient Portal Integration](Patient_Portal_Integration.md)
+
+---
+
+(Expand this document with more diagrams and technical details as the project evolves.)
+
 ## 2. System Architecture
 
 ### 2.1 Microservices Architecture
